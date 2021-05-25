@@ -99,6 +99,9 @@ func Generate(filters ...RuleFilter) RuleList {
 
 		// memory safety
 		{"G601", "Implicit memory aliasing in RangeStmt", NewImplicitAliasing},
+
+		// SSM Agent rules
+		{"SSM101", "Using temporary folder", NewBadTempFolder},
 	}
 
 	ruleMap := make(map[string]RuleDefinition)
